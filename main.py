@@ -10,7 +10,7 @@ value=[]
 
 
 src = 'BreastCancer'
-dest  = 'Output\BreastCancer'
+dest  = 'Output'
 
 
 
@@ -46,10 +46,11 @@ def sorting():
                 value[i]=value[i+1]
                 value[i+1]=temp1
 def output():
-     for index in range(len(images)):
+    os.mkdir('Output')
+    for index in range(len(images)):
         filename = f'img_{index}.jpg'
         img_des = os.path.join(dest, filename);
-        cv2.imwrite(filename ,images[index]);
+        cv2.imwrite(img_des ,images[index]);
 
 preprocessing()
 sorting()
