@@ -48,7 +48,7 @@ def sorting():
 def output():
     os.mkdir('Output')
     for index in range(len(images)):
-        filename = f'img_{index}.jpg'
+        filename = f'img_{index+1}.jpg'
         img_des = os.path.join(dest, filename);
         cv2.imwrite(img_des ,images[index]);
 
